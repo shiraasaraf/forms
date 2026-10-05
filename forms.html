@@ -8,86 +8,76 @@
 </head>
 
 <body>
+
     <form action="/submit" method="post">
         <fieldset>
-            <legend>Text input</legend>
-            <br>
-            <label for="Username">Username</label>
-            <input type="text" id="Username" name="Username">
-            <br>
+            <legend>Personal Information</legend>
 
-            <br>
-            <label for="Password">Password</label>
-            <input type="password" id="Password" name="Password">
-            <br>
+            <label for="fname">Full Name</label>
+            <input type="text" id="fname" name="fname" min="2" max="20" required><br><br>
 
-            <br>
-            <label for="Email">Email</label>
-            <input type="email" id="Email" name="Email">
-            <br>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required><br><br>
 
-
-
-        </fieldset>
-
-
-        <fieldset>
-
-            <br>
-            <label for="File"></label>
-            <input type="file" name="file" id="file">
-            <br>
-
-            <br>
-            <label for="range"></label>
-            <input type="range" id="volume" name="volume" min="0" max="100" value="50">
-            <br>
+            <label for="Phone">Phone </label>
+            <input type="tel" id="Phone" name="Phone" pattern="[0-9]{3}-[0-9]{7}"><br><br>
 
         </fieldset>
 
         <fieldset>
-            <legend>Radio</legend>
+            <legend>Ticket & Workshops</legend>
 
-            <label for="small">small</label>
-            <input type="radio" id="small" name="size" value="s">
+            <select name="Ticket type" id="Ticket type">
+                <option value="Standard">Standard</option>
+                <option value="VIP">VIP</option>
+                <option value="Student">Student</option>
+                required
+            </select><br><br>
 
-            <label for="medium">medium</label>
-            <input type="radio" id="medium" name="size" value="m">
+            <input type="checkbox" id="Workshops1" name="Workshops1" value="Web Performance">
+            <label for="Workshops1">Web Performance</label><br>
+            <input type="checkbox" id="Workshops2" name="Workshops2" value="Accessibility">
+            <label for="Workshops2"></label>Accessibility<br>
+            <input type="checkbox" id="Workshops3" name="Workshops3" value="Testing">
+            <label for="Workshops3"></label>Testing<br><br>
 
-            <label for="large">large</label>
-            <input type="radio" id="large" name="size" value="l">
+
+            <input type="radio" id="None" name="Diet" value="NONE">
+            <label for="None">None</label><br>
+            <input type="radio" id="Vegan" name="Diet" value="VEGAN">
+            <label for="Vegan">Vegan</label><br>
+            <input type="radio" id="Kosher" name="Diet" value="KOSHER">
+            <label for="Kosher">Kosher</label><br>
+            <input type="radio" id="Halal" name="Diet" value="HALAL">
+            <label for="Halal">Halal</label><br>
+            <input type="radio" id="Other" name="Diet" value="OTHER">
+            <label for="Other">Other</label><br>
+            <input type="text" name="otherDiet" placeholder="Please specify">
+
 
         </fieldset>
 
         <fieldset>
-            <legend>Checkbox</legend>
+            <legend>Payment Details</legend>
+            <label for="cnumber">Card number</label>
+            <input type="text" id="cnumber" name="cnumber" min="13" max="19" pattern="[0-9]{13,19}" required><br>
 
-            <input type="checkbox" id="html" name="topics" value="html">
-            <label for="html"> HTML</label>
+            <label for="edate">Expiry date</label>
+            <input type="date" id="edate" name="Expiry date" required><br>
 
-            <input type="checkbox" id="css" name="topics" value="css">
-            <label for="css"> CSS</label>
+            <label for="cvv">CVV</label>
+            <input type="password" id="cvv" name="CVV" pattern="[0-9]{3,4}"><br>
 
-            <input type="checkbox" id="js" name="topics" value="js">
-            <label for="js"> JavaScript</label>
 
         </fieldset>
 
         <fieldset>
-            <legend>Select</legend>
-            <label for="country">Country</label>
-            <select name="country" id="country">
-                <option value="il">Israel</option>
-                <option value="us">Israel</option>
-                <option value="il">Israel</option>
-                <option value="il">Israel</option>
-                <option value="il">Israel</option>
-            </select>
+            <legend>Agreements</legend>
         </fieldset>
 
-        <button>Send</button>
-
+        <button>Submit</button>
     </form>
+
 
 </body>
 
